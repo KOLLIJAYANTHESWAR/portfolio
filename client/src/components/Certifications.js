@@ -95,17 +95,6 @@ const Certifications = () => {
       status: "Active",
       credentialId: "NET-FUN",
     },
-    {
-      id: 9,
-      name: "AWS Social Internship",
-      issuer: "Amazon Web Services",
-      year: "2024",
-      description: "AWS cloud internship program completion",
-      link: "https://drive.google.com/file/d/1LEiGx-o3EaD7Yp1hHUEdvdd0kWiso_Uf/view?usp=sharing",
-      category: "Internship",
-      status: "Active",
-      credentialId: "AWS-INT",
-    },
   ]
 
   const achievements = [
