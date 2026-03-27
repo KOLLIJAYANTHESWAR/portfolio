@@ -4,7 +4,6 @@ import { useState } from "react"
 import "./Certifications.css"
 
 const Certifications = () => {
-  const [expandedCategory, setExpandedCategory] = useState(null)
   const [selectedView, setSelectedView] = useState("certifications")
 
   const certifications = [
@@ -141,10 +140,12 @@ const Certifications = () => {
   return (
     <section id="certifications" className="certifications">
       <div className="certifications-container">
-        {/* Section Header */}
+
         <div className="section-header">
           <h2 className="section-title">Credentials & Achievements</h2>
-          <p className="section-subtitle">Professional certifications, awards, and key accomplishments</p>
+          <p className="section-subtitle">
+            Professional certifications, awards, and key accomplishments
+          </p>
         </div>
 
         <div className="view-toggle">
@@ -154,6 +155,7 @@ const Certifications = () => {
           >
             Certifications
           </button>
+
           <button
             className={`toggle-btn ${selectedView === "achievements" ? "active" : ""}`}
             onClick={() => setSelectedView("achievements")}
@@ -163,7 +165,7 @@ const Certifications = () => {
         </div>
 
         <div className="certifications-content">
-          {/* Certifications View */}
+
           {selectedView === "certifications" && (
             <div className="certifications-view">
               <div className="cert-summary">
@@ -177,7 +179,6 @@ const Certifications = () => {
                 </div>
               </div>
 
-              {/* Certifications Grid */}
               <div className="certs-grid">
                 {certifications.map((cert) => (
                   <a key={cert.id} href={cert.link} target="_blank" rel="noopener noreferrer" className="cert-card">
@@ -202,7 +203,6 @@ const Certifications = () => {
             </div>
           )}
 
-          {/* Achievements View */}
           {selectedView === "achievements" && (
             <div className="achievements-view">
               <div className="achievements-grid">
@@ -228,7 +228,6 @@ const Certifications = () => {
           )}
         </div>
 
-        {/* Resume Download */}
         <div className="resume-section">
           <p className="resume-text">Want to see everything?</p>
           <a
