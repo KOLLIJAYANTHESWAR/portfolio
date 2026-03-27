@@ -1,0 +1,138 @@
+.skills {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--background-primary);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* Fixed heading visibility with proper color contrast */
+.skills-subsection-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.skill-category {
+  background-color: var(--background-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 500ms ease;
+  pointer-events: none;
+}
+
+.skill-category:hover::before {
+  left: 100%;
+}
+
+.skill-category:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.12);
+  transform: translateY(-6px);
+}
+
+/* Fixed soft skill category colors for light mode contrast */
+.soft-skill-category {
+  border-left: 4px solid var(--accent-primary-light);
+  background: linear-gradient(135deg, var(--background-secondary) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+.soft-skill-category:hover {
+  border-left-color: var(--accent-primary);
+  background: linear-gradient(135deg, var(--background-secondary) 0%, rgba(59, 130, 246, 0.1) 100%);
+}
+
+.category-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-md) 0;
+  padding: 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: var(--background-primary);
+  color: var(--text-secondary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid var(--border-color);
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background-color: var(--accent-blue);
+  color: white;
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Fixed soft skill tag styling with proper light mode colors using defined CSS variables */
+.soft-skill-tag {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary-light);
+}
+
+.soft-skill-tag:hover {
+  background-color: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .skills-subsection-title {
+    font-size: 1.3rem;
+  }
+}
