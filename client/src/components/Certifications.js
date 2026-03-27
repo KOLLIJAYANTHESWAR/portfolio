@@ -231,7 +231,7 @@ const Certifications = () => {
         <div className="resume-section">
           <p className="resume-text">Want to see everything?</p>
           <a
-            href="https://drive.google.com/file/d/1VF3wH5uwtVToqPVmJ2UEmUhK4AO1wJa6/view?usp=sharing"
+            href="https://www.kollijayantheswar.in/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-btn"

@@ -43,7 +43,7 @@ const Hero = () => {
   }
 
   const downloadResume = () => {
-    window.open("https://drive.google.com/file/d/1VF3wH5uwtVToqPVmJ2UEmUhK4AO1wJa6/view?usp=sharing", "_blank")
+    window.open("https://www.kollijayantheswar.in/resume.pdf", "_blank")
   }
 
   return (
